@@ -3,9 +3,10 @@ import java.util.Scanner;
 public class Menu {
 
 public void affichage(Tableau tab){
-	Scanner sc=new Scanner(System.in);
 	System.out.println("Que voulez-vous faire? Créer un tableau manuellement(m) ou aleatoirement(a)?");
+	Scanner sc=new Scanner(System.in);
 	String choix=sc.nextLine();
+		
 	if(choix.equals("m")){
 		tab.GenerateurTableManuel();
 		System.out.println("\n Tableau crée");
@@ -17,10 +18,12 @@ public void affichage(Tableau tab){
 }
 	public static void main(String[] args) {
 			Menu m=new Menu();
-			Tableau tab=new Tableau(50);
-			m.affichage(tab);
+			System.out.println("Saisir la taille du tableau désiré");
+			Scanner ct=new Scanner(System.in);
+			int choixTaille=ct.nextInt();
 			
-			tab.GenerateurTableAleatoire(); 
+			Tableau tab=new Tableau(choixTaille);
+			m.affichage(tab);
 			tab.triTable();
 			System.out.println(tab.toString());
 	}
