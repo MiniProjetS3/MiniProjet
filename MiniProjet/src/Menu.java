@@ -26,6 +26,15 @@ public void affichage(Tableau tab){
 			m.affichage(tab);
 			tab.triTable();
 			System.out.println(tab.toString());
-	}
+			System.out.println("Saisir valeur a chercher");
+			Scanner rv=new Scanner(System.in);
+			int val=rv.nextInt();
+			if(tab.RechercheTable(val)==-1){
+				System.out.println("La valeur n'est pas dans le tableau");
+			}
+			else{
+				System.out.println("La valeur existe dans le tableau à l'indice "+tab.RechercheTable(val));
+			}
 
+		}
 }

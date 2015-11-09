@@ -36,7 +36,7 @@ public class Tableau{
 		this.tab[i]=chg;
 	}
 
-	public float[] generateurTableManuel() {
+	public void GenerateurTableManuel() {
 
 		Scanner sc =new Scanner(System.in);
 		float val=0;
