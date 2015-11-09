@@ -1,9 +1,9 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
-
-public class Tableau {
+public class Tableau{
 	
-	private float[] tab;
+	private float [] tab;
 	private int taille;
 	private boolean estTrie;
 	
@@ -11,10 +11,9 @@ public class Tableau {
 		tab= new float[t];
 		taille=t;
 		estTrie=false;
-		
 	}
 	
-	public float getTab(int i) {
+	public float getTable(int i) {
 		return this.tab[i];
 	}
 	
@@ -26,35 +25,45 @@ public class Tableau {
 		return this.estTrie;
 	}
 	
-	public float[] RemplirAlea() {
+	public float[] GenerateurTableAleatoire() {
 		for(int i=0;i<this.taille;i++) {
-			this.tab[i]= (float)( Math.random()*(22000000)-11000000);
+			this.tab[i]= (float)( Math.random()*(2200)-1100);
 		}
 		return this.tab;
 	}
 	
-	public float[] RemplirMain() {
+	public void setTable(float chg,int i){
+		this.tab[i]=chg;
+	}
+	
+	public void setTaille(int t){
+		this.taille=t;
+	}
+	
+
+	public float[] generateurTableManuel() {
+
 		Scanner sc =new Scanner(System.in);
 		float val=0;
 		for(int i=0;i<this.taille;i++) {
 			System.out.println("Entrez une valeur pour la case : "+i);
 			val=sc.nextFloat();
 			this.tab[i]=val;
-
 		}
 		return this.tab;
 	}
 	
-	public int RechercheDicho(int val) {
-		  if(!estTrie)
+
+	public int RechercheTable(int val) {
+		if(!estTrie)
 			  this.triTable();
 		  
+
 		  boolean trouve; 
 		  int id; 
 		  int ifin;  
 		  int im; 
 		  
-
 		  trouve = false;  
 		  id = 0;  
 		  ifin = taille;  
@@ -92,9 +101,12 @@ public class Tableau {
              }
              this.estTrie=true;
              return this.tab;
-     } 
+     	}
 
-
+	public String toString() {
+		return "Tableau "+Arrays.toString(tab);
 	}
+}
+	
 
 

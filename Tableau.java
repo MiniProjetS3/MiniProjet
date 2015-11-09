@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Tableau{
@@ -27,7 +26,7 @@ public class Tableau{
 	
 	public float[] GenerateurTableAleatoire() {
 		for(int i=0;i<this.taille;i++) {
-			this.tab[i]= (float)( Math.random()*(2200)-1100);
+			this.tab[i]= (float)( Math.random()*(22000000)-11000000);
 		}
 		return this.tab;
 	}
@@ -40,33 +39,26 @@ public class Tableau{
 		this.taille=t;
 	}
 	
-
 	public float[] generateurTableManuel() {
-
 		Scanner sc =new Scanner(System.in);
 		float val=0;
 		for(int i=0;i<this.taille;i++) {
 			System.out.println("Entrez une valeur pour la case : "+i);
 			val=sc.nextFloat();
 			this.tab[i]=val;
+
 		}
 		return this.tab;
 	}
 	
-<<<<<<< HEAD
-	public int RechercheDicho(int val) {
-		  if(!estTrie)
-			  this.triTable();
-		  
-=======
 	public int RechercheTable(int val) {
 		
->>>>>>> master
 		  boolean trouve; 
 		  int id; 
 		  int ifin;  
 		  int im; 
 		  
+
 		  trouve = false;  
 		  id = 0;  
 		  ifin = taille;  
@@ -91,7 +83,7 @@ public class Tableau{
 		  
 		}
 	
-	 public float[] triTable() {
+	 public float[] rechercheTable() {
 		 
              for (int i=0 ;i<=this.taille;i++) {
                      for (int j=i+1;j<this.taille;j++) {
@@ -104,12 +96,7 @@ public class Tableau{
              }
              this.estTrie=true;
              return this.tab;
-     	}
-
-	public String toString() {
-		return "Tableau "+Arrays.toString(tab);
+     	} 
 	}
-}
-	
 
 
