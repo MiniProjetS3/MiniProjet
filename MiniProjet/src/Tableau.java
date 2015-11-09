@@ -24,9 +24,9 @@ public class Tableau{
 		return this.estTrie;
 	}
 	
-	public float[] RemplirAlea() {
+	public float[] GenerateurTableAleatoire() {
 		for(int i=0;i<this.taille;i++) {
-			this.tab[i]= (float)( Math.random()*(22000000)-11000000);
+			this.tab[i]= (float)( Math.random()*(2200)-1100);
 		}
 		return this.tab;
 	}
@@ -39,14 +39,13 @@ public class Tableau{
 		this.taille=t;
 	}
 	
-	public float[] RemplirMain() {
+	public float[] GenerateurTableManuel() {
 		Scanner sc =new Scanner(System.in);
 		float val=0;
 		for(int i=0;i<this.taille;i++) {
 			System.out.println("Entrez une valeur pour la case : "+i);
 			val=sc.nextFloat();
 			this.tab[i]=val;
-
 		}
 		return this.tab;
 	}
@@ -58,7 +57,6 @@ public class Tableau{
 		  int ifin;  
 		  int im; 
 		  
-
 		  trouve = false;  
 		  id = 0;  
 		  ifin = taille;  
