@@ -24,7 +24,7 @@ public class Tableau{
 		return this.estTrie;
 	}
 	
-	public float[] RemplirAlea() {
+	public float[] GenerateurTableAleatoire() {
 		for(int i=0;i<this.taille;i++) {
 			this.tab[i]= (float)( Math.random()*(22000000)-11000000);
 		}
@@ -39,7 +39,7 @@ public class Tableau{
 		this.taille=t;
 	}
 	
-	public float[] RemplirMain() {
+	public float[] generateurTableManuel() {
 		Scanner sc =new Scanner(System.in);
 		float val=0;
 		for(int i=0;i<this.taille;i++) {
@@ -51,7 +51,7 @@ public class Tableau{
 		return this.tab;
 	}
 	
-	public int RechercheDicho(int val) {
+	public int RechercheTable(int val) {
 		
 		  boolean trouve; 
 		  int id; 
