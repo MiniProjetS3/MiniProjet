@@ -46,7 +46,9 @@ public class Tableau {
 	}
 	
 	public int RechercheDicho(int val) {
-		
+		  if(!estTrie)
+			  this.triTable();
+		  
 		  boolean trouve; 
 		  int id; 
 		  int ifin;  
@@ -77,7 +79,7 @@ public class Tableau {
 		  
 		}
 	
-	 public float[] tribulles() {
+	 public float[] triTable() {
 		 
              for (int i=0 ;i<=this.taille;i++) {
                      for (int j=i+1;j<this.taille;j++) {
