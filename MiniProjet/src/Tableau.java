@@ -1,9 +1,8 @@
 import java.util.Scanner;
 
-
-public class Tableau {
+public class Tableau{
 	
-	private float[] tab;
+	private float [] tab;
 	private int taille;
 	private boolean estTrie;
 	
@@ -11,10 +10,9 @@ public class Tableau {
 		tab= new float[t];
 		taille=t;
 		estTrie=false;
-		
 	}
 	
-	public float getTab(int i) {
+	public float getTable(int i) {
 		return this.tab[i];
 	}
 	
@@ -31,6 +29,14 @@ public class Tableau {
 			this.tab[i]= (float)( Math.random()*(22000000)-11000000);
 		}
 		return this.tab;
+	}
+	
+	public void setTable(float chg,int i){
+		this.tab[i]=chg;
+	}
+	
+	public void setTaille(int t){
+		this.taille=t;
 	}
 	
 	public float[] RemplirMain() {
@@ -77,7 +83,7 @@ public class Tableau {
 		  
 		}
 	
-	 public float[] tribulles() {
+	 public float[] rechercheTable() {
 		 
              for (int i=0 ;i<=this.taille;i++) {
                      for (int j=i+1;j<this.taille;j++) {
@@ -90,9 +96,7 @@ public class Tableau {
              }
              this.estTrie=true;
              return this.tab;
-     } 
-
-
+     	} 
 	}
 
 
