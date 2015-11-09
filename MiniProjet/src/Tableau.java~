@@ -35,9 +35,19 @@ public class Tableau{
 	public void setTable(float chg,int i){
 		this.tab[i]=chg;
 	}
+	
+<<<<<<< HEAD
+	public void GenerateurTableManuel() {
+		
+=======
+	public void setTaille(int t){
+		this.taille=t;
+	}
+	
 
 	public float[] generateurTableManuel() {
 
+>>>>>>> e0d29bf51f7f8577a71dc7046d4858bb85c1e1b7
 		Scanner sc =new Scanner(System.in);
 		float val=0;
 		try{
