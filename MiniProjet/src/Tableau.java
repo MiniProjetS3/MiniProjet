@@ -53,7 +53,7 @@ public class Tableau{
 	}
 	
 
-	public int RechercheTable(int val) {
+	public int RechercheTable(float val) {
 		if(!estTrie)
 			  this.triTable();
 		  
@@ -106,6 +106,3 @@ public class Tableau{
 		return "Tableau "+Arrays.toString(tab);
 	}
 }
-	
-
-

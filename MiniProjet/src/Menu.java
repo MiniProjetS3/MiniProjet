@@ -26,9 +26,9 @@ public void affichage(Tableau tab){
 			m.affichage(tab);
 			tab.triTable();
 			System.out.println(tab.toString());
-			System.out.println("Saisir valeur a chercher");
+			System.out.println("Saisir valeur a chercher(avec une virgule!)");
 			Scanner rv=new Scanner(System.in);
-			int val=rv.nextInt();
+			float val=rv.nextFloat();		
 			if(tab.RechercheTable(val)==-1){
 				System.out.println("La valeur n'est pas dans le tableau");
 			}
