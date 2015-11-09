@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Tableau{
@@ -81,7 +82,7 @@ public class Tableau{
 		  
 		}
 	
-	 public float[] rechercheTable() {
+	 public float[] triTable() {
 		 
              for (int i=0 ;i<=this.taille;i++) {
                      for (int j=i+1;j<this.taille;j++) {
@@ -94,7 +95,12 @@ public class Tableau{
              }
              this.estTrie=true;
              return this.tab;
-     	} 
+     	}
+
+	public String toString() {
+		return "Tableau ["+Arrays.toString(tab)+"]";
 	}
+}
+	
 
 
