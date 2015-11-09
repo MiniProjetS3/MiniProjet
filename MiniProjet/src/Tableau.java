@@ -98,7 +98,7 @@ public class Tableau{
      	}
 
 	public String toString() {
-		return "Tableau ["+Arrays.toString(tab)+"]";
+		return "Tableau "+Arrays.toString(tab);
 	}
 }
 	
