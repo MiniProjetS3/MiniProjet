@@ -36,6 +36,10 @@ public class Tableau{
 		this.tab[i]=chg;
 	}
 	
+<<<<<<< HEAD
+	public void GenerateurTableManuel() {
+		
+=======
 	public void setTaille(int t){
 		this.taille=t;
 	}
@@ -43,25 +47,23 @@ public class Tableau{
 
 	public float[] generateurTableManuel() {
 
+>>>>>>> e0d29bf51f7f8577a71dc7046d4858bb85c1e1b7
 		Scanner sc =new Scanner(System.in);
 		float val=0;
-		for(int i=0;i<this.taille;i++) {
-			System.out.println("Entrez une valeur pour la case : "+i);
-			val=sc.nextFloat();
-			this.tab[i]=val;
+		try{
+			for(int i=0;i<this.taille;i++) {
+				System.out.println("Entrez une valeur pour la case : "+i);
+				val=sc.nextFloat();
+				this.tab[i]=val;
+			}
 		}
-		return this.tab;
+			catch(Exception e){
+				System.out.println("Erreur format incompatible");
+			}
 	}
 	
-<<<<<<< HEAD
-	public int RechercheDicho(int val) {
-		  if(!estTrie)
-			  this.triTable();
-		  
-=======
 	public int RechercheTable(int val) {
 		
->>>>>>> master
 		  boolean trouve; 
 		  int id; 
 		  int ifin;  
