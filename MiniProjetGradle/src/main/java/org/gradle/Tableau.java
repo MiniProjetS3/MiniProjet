@@ -1,3 +1,5 @@
+package org.gradle;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -37,18 +39,18 @@ public class Tableau{
 	}
 
 	public void GenerateurTableManuel() {
-
+		int i;
 		Scanner sc =new Scanner(System.in);
 		float val=0;
 		try{
-			for(int i=0;i<this.taille;i++) {
+			for(i=0;i<this.taille;i++) {
 				System.out.println("Entrez une valeur pour la case : "+i);
 				val=sc.nextFloat();
 				this.tab[i]=val;
 			}
 		}
 			catch(Exception e){
-				System.out.println("Erreur format incompatible");
+				System.out.println("Erreur format incompatible, la case a été initialisée à 0.0");
 			}
 	}
 	

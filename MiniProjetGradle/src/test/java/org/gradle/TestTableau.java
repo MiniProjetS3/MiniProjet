@@ -1,5 +1,5 @@
+package org.gradle;
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 
@@ -12,14 +12,12 @@ public class TestTableau extends TestCase {
          super(arg0);
    }
 
-   public static void main(String[] args) {
-         junit.swingui.TestRunner.run(Tableau.class);
-   }
 
    protected void setUp() throws Exception {
          super.setUp();
          tab = new Tableau(5);
-         this.tab.GenerateurTableManuel();
+         tab.GenerateurTableAleatoire();
+         
    }
 
    protected void tearDown() throws Exception {
@@ -28,14 +26,15 @@ public class TestTableau extends TestCase {
    }
 
    public void testRechercheValide() {
-	   	
-         assertTrue(tab.RechercheTable(1) >= 0  );           
+	     this.tab.setTable(1, 1);
+         assertTrue(tab.RechercheTable(1) == 1  );           
    }
    
    public void testRechercheNonValide() {
-	   	
-       assertTrue(tab.RechercheTable(-2) == -1  );           
+	   this.tab.setTable(1, 1);
+       assertTrue(tab.RechercheTable(-2) == -1  );   
   }
+   
    
   
    
