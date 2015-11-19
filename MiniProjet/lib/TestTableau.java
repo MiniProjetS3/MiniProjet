@@ -30,6 +30,6 @@ public class TestTableau extends TestCase {
 
    public void testRechercheValide() {
 	   	
-         assertTrue(tab.RechercheTable(5) == 4);           
+         assertTrue(tab.RechercheTable(1) != -1 );           
    }
 }
