@@ -1,3 +1,5 @@
+package org.gradle;
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -10,10 +12,6 @@ public class TestTableau extends TestCase {
 
    public TestTableau(String arg0) {
          super(arg0);
-   }
-
-   public static void main(String[] args) {
-         junit.swingui.TestRunner.run(Tableau.class);
    }
 
    protected void setUp() throws Exception {
@@ -36,9 +34,5 @@ public class TestTableau extends TestCase {
 	   	
        assertTrue(tab.RechercheTable(-2) == -1  );           
   }
-   
-  
-   
-  
    
 }
