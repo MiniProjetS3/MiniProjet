@@ -19,8 +19,7 @@ public class TestTableau extends TestCase {
    protected void setUp() throws Exception {
          super.setUp();
          tab = new Tableau(5);
-         this.tab.GenerateurTableAleatoire();
-         this.tab.setTable(1,1);
+         this.tab.GenerateurTableManuel();
    }
 
    protected void tearDown() throws Exception {
@@ -30,12 +29,16 @@ public class TestTableau extends TestCase {
 
    public void testRechercheValide() {
 	   	
-         assertTrue(tab.RechercheTable(1) > 0  );           
+         assertTrue(tab.RechercheTable(1) >= 0  );           
    }
    
    public void testRechercheNonValide() {
 	   	
        assertTrue(tab.RechercheTable(-2) == -1  );           
   }
+   
+  
+   
+  
    
 }
